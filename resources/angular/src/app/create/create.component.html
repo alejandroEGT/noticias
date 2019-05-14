@@ -1,0 +1,22 @@
+
+<div>
+	
+	<div class="card">
+		<div class="card-header">Log in</div>
+
+		<div class="card-body">
+			<div class="row justify-content-md-center">
+				<div class="col-md-5">
+					<input [(ngModel)]="name" name="name" placeholder="Name" class="form-control" type="text"><br>
+					<input [(ngModel)]="email" placeholder="Email" class="form-control" type="text"><br>
+					<input [(ngModel)]="pass" placeholder="Password" class="form-control" type="text"><br>
+					<input [(ngModel)]="rpass" placeholder="Password" class="form-control" type="text"><br>
+					<!-- <input placeholder="Name.." class="form-control" type="text">
+					<input placeholder="Name.." class="form-control" type="text"> -->
+					<button (click)="create()" class="btn btn-block btn-primary">Entrar</button>
+				</div>	
+			</div>
+		</div>	
+	</div>
+
+</div>
