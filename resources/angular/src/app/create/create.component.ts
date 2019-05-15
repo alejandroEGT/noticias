@@ -25,6 +25,8 @@ export class CreateComponent implements OnInit {
   		name: this.name, email: this.email, pass: this.pass
   	};		
 
-  	  
+      //no borrar este console log :)
+  	  console.log(data);
+
   }
 }
