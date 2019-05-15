@@ -25,12 +25,6 @@ export class CreateComponent implements OnInit {
   		name: this.name, email: this.email, pass: this.pass
   	};		
 
-  	   this.http.post('/getData', data)
-      .then(response => {
-        this.posts = response.data.entry
-      })
-      .catch(e => {
-        this.errors.push(e)
-      })
+  	  
   }
 }
