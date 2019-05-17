@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { CreateComponent } from './create/create.component';
+import { TestComponent } from './test/test.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -20,7 +21,8 @@ export function tokenGetter() {
     AppComponent,
     InicioComponent,
     LoginComponent,
-    CreateComponent
+    CreateComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
