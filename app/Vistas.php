@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vistas extends Model
 {
-    protected $table="vistas"
+    protected $table="vistas";
 }
