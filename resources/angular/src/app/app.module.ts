@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { NavbarComponent } from './componentesNoticiero/navbar/navbar.component';
 import { TitularesComponent } from './componentesNoticiero/titulares/titulares.component';
 import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
@@ -22,6 +23,12 @@ import { CreadorNoticiaComponent } from './componentesAdministrativo/creador-not
 import { CreadorUsuariosComponent } from './componentesAdministrativo/creador-usuarios/creador-usuarios.component';
 import { ConfiguracionComponent } from './componentesAdministrativo/configuracion/configuracion.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
+=======
+import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
+import { CreateComponent } from './create/create.component';
+import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
+>>>>>>> david
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -38,6 +45,7 @@ export function tokenGetter() {
     FooterComponent,
     NoticieroComponent,
     LoginComponent,
+<<<<<<< HEAD
     MantenedorNoticiasComponent,
     MantenedorUsuariosComponent,
     EditarNoticiaComponent,
@@ -47,6 +55,10 @@ export function tokenGetter() {
     CreadorUsuariosComponent,
     ConfiguracionComponent,
     AdministrativoComponent,
+=======
+    CreateComponent,
+    FlujoCajaComponent
+>>>>>>> david
   ],
   imports: [
     BrowserModule,
