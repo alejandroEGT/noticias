@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { CreateComponent } from './create/create.component';
+import { NoticieroComponent } from './noticiero/noticiero.component';
+import { TitularesComponent } from './componentesNoticiero/titulares/titulares.component';
+import { LeerNoticiaComponent } from './componentesNoticiero/leer-noticia/leer-noticia.component';
+import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
+import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
 
 const routes: Routes = [
-	// {path:'**', pathMach: 'full', redirectTo: ''},
-	
-	{ path: '', component: InicioComponent ,
-		 children: [
-	      { path: 'login', component: LoginComponent },
-	       { path: 'create', component: CreateComponent },
-	    ]
-	},
-	
+	{ path: '', component: NoticieroComponent, children:[
+    { path: '', component: TitularesComponent },
+    { path: 'leer', component: LeerNoticiaComponent },
+		{ path: 'selector', component: SelectorNoticiaComponent },
+		{ path: 'flujoCaja', component: FlujoCajaComponent }
+  ]}
 ];
 
 @NgModule({

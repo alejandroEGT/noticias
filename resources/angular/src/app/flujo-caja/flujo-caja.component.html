@@ -1,3 +1,56 @@
-<p>
-  hola mundo
-</p>
+<div>
+  <div class="card">
+    <div class="card-header">
+        Flujo de Caja
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col"> <label>Año</label> 
+          <select class="form-control"> 
+            <option value="2019">2019</option>
+            <option value="2020">2020</option> 
+          </select> 
+        </div>
+
+        <div class="col"> <label>Mes</label> 
+          <select class="form-control"> 
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option> 
+          </select> 
+        </div>
+
+        <div class="col">
+          <label>Monto inicial</label><input class="form-control">
+        </div>
+
+        <div class="col"> <label>Tipo</label><br>
+          <input type="radio">ingreso
+          <input type="radio">egreso
+        </div>
+
+        <div class="col"> <label>Detalle Tipo</label> 
+          <select class="form-control"> 
+            <option value="1">ingreso por ventas</option>
+            <option value="2">Cobro de deudas</option> 
+          </select> 
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col">
+            <label>Monto del detalle</label><input class="form-control">
+        </div>
+        <div class="col">
+          <label>Detalle del Monto</label><br>
+          <button class="btn btn-success" (click)="btn_monto()"> {{btn_txt}} detalle del monto</button>
+        </div>
+      </div>
+      <div class="row" *ngIf="btn_detalle">
+        <div class="col"><br>
+          <textarea class="form-control" rows="10"></textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
