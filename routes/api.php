@@ -30,7 +30,25 @@ Route::group(['middleware' => 'jwt.auth'], function(){
 	  Route::post('auth/logout', 'AuthController@logout');
 
 	  Route::get('auth/test', function(){
-	  	return "success";
+	  	
+
+	  			$obj = [
+
+	  				['nombre'=>'Alejandro', 'apellido'=>'Godoy', 'edad'=>'24', 'activo'=>'S',
+	  				'datos'=>[
+	  					'anio_nac'=>'29/11/1994', 'contacto'=>'99775566'
+	  				]],
+	  				['nombre'=>'KKCK', 'apellido'=>'KKCK', 'edad'=>'24', 'activo'=>'S'],
+	  				['nombre'=>'KKCK', 'apellido'=>'KKCK', 'edad'=>'24', 'activo'=>'N']
+
+
+	  			];
+	  			
+
+	  			return $obj;
+
+
+
 	  });
 
 	  //agregando rutas alejandro.
