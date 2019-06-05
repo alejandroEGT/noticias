@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarAdminComponent implements OnInit {
 
+  isLoggedIn: boolean;
+  loggedInUser: string;
+  permitirRegistro: boolean;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  logOut(){
+    
+  } 
 
 }
