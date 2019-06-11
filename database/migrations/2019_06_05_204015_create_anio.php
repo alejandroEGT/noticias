@@ -15,7 +15,7 @@ class CreateAnio extends Migration
     {
         Schema::create('anio', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('id_mes');
+            //$table->integer('id_mes');
             $table->string('descripcion');
             $table->char('activo');
             $table->timestamps();
