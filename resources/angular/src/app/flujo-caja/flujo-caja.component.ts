@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlujoCajaComponent implements OnInit {
 
+  btn_detalle: boolean = false;
+  btn_txt: string = "Ver";
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  btn_monto() {
+    this.btn_detalle = !this.btn_detalle;
+
+    if (this.btn_detalle == true) {
+      this.btn_txt = "Ocultar";
+    } else {
+      this.btn_txt = "Ver";
+    }
+
   }
 
 }

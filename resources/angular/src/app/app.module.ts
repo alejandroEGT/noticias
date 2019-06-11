@@ -1,3 +1,26 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@alejandroEGT 
+1
+0 0 alejandroEGT/noticias
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
+noticias/resources/angular/src/app/app.module.ts
+@davidluna1995 davidluna1995 diseño flujo de caja
+172200c 6 days ago
+@bvidalneofox @davidluna1995 @alejandroEGT
+We found potential security vulnerabilities in your dependencies.
+Only the owner of this repository can see this message. 
+Manage your notification settings or learn more about security alerts.
+
+73 lines (65 sloc)  2.94 KB
+    
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
@@ -6,7 +29,9 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
+
+import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
+
 import { NavbarComponent } from './componentesNoticiero/navbar/navbar.component';
 import { TitularesComponent } from './componentesNoticiero/titulares/titulares.component';
 import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
@@ -23,12 +48,7 @@ import { CreadorNoticiaComponent } from './componentesAdministrativo/creador-not
 import { CreadorUsuariosComponent } from './componentesAdministrativo/creador-usuarios/creador-usuarios.component';
 import { ConfiguracionComponent } from './componentesAdministrativo/configuracion/configuracion.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
-=======
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { CreateComponent } from './create/create.component';
-import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
->>>>>>> david
+
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -45,7 +65,8 @@ export function tokenGetter() {
     FooterComponent,
     NoticieroComponent,
     LoginComponent,
-<<<<<<< HEAD
+
+    FlujoCajaComponent,
     MantenedorNoticiasComponent,
     MantenedorUsuariosComponent,
     EditarNoticiaComponent,
@@ -55,10 +76,6 @@ export function tokenGetter() {
     CreadorUsuariosComponent,
     ConfiguracionComponent,
     AdministrativoComponent,
-=======
-    CreateComponent,
-    FlujoCajaComponent
->>>>>>> david
   ],
   imports: [
     BrowserModule,
@@ -77,3 +94,15 @@ export function tokenGetter() {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
