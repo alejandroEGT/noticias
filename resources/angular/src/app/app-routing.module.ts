@@ -21,7 +21,7 @@ const routes: Routes = [
     { path: '', component: TitularesComponent },
     { path: 'leer', component: LeerNoticiaComponent },
 		{ path: 'selector', component: SelectorNoticiaComponent },
-		{ path: 'flujoCaja', component: FlujoCajaComponent }
+		{ path: 'flujoCaja', component: FlujoCajaComponent },
 		{ path: 'selector', component: SelectorNoticiaComponent },
 		{ path: 'flujoCaja', component: FlujoCajaComponent },
     { path: 'selector', component: SelectorNoticiaComponent }
