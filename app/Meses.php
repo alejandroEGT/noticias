@@ -11,7 +11,7 @@ class Meses extends Model
     protected function traerMeses(){
         $mes = Meses::select([
             'id',
-            'descripcion'
+            'descripcion as mes'
         ])
         ->where('activo', 's')
         ->get(); 
