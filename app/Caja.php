@@ -27,5 +27,6 @@ class Caja extends Model
     protected function listar($r)
     {
     	return "listando 2.0..";
+    	dd('test');
     }
 }
