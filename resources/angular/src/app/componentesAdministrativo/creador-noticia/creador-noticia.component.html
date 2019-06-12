@@ -1,0 +1,88 @@
+<form #noticiaForm="ngForm" (ngSubmit)="guardar(noticiaForm)">
+
+  <!--Botones de edicion-->
+  <section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a routerLink="/" class="btn btn-light btn-block">
+            <i class="fas fa-arrow-left"></i> Regresar al Inicio
+          </a>
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-success btn-block">
+            <i class="fas fa-check"></i> Guardar Noticia
+          </button>
+        </div>
+        <div class="col-md-4">
+          <a href="#" (click)="eliminar()" class="btn btn-danger btn-block">
+            <i class="fas fa-trash"></i> Dejar en borrador Noticia
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Creador Noticia</h4>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="titulo">Titulo Noticia</label>
+                <input type="text" name="titulo" class="form-control" #titulo="ngModel" [(ngModel)]="noticia.titulo"
+                  [ngClass]="{'is-invalid': titulo.errors && titulo.touched}" required minlength="5">
+                <div [hidden]="!titulo.errors?.required" class="invalid-feedback">
+                  Titulo requerido
+                </div>
+                <div [hidden]="!titulo.errors?.minlength" class="invalid-feedback">
+                  Minimo 5 caracteres
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="titular">Titular</label>
+                <textarea name="titular" class="form-control" #titular="ngModel"
+                  [(ngModel)]="noticia.titular" [ngClass]="{'is-invalid': titular.errors && titular.touched}"
+                  required minlength="5">
+                </textarea>
+                <div [hidden]="!titular.errors?.required" class="invalid-feedback">
+                  Titular requerido
+                </div>
+                <div [hidden]="!titular.errors?.minlength" class="invalid-feedback">
+                  Minimo 5 caracteres
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input type="descripcion" name="descripcion" class="form-control" #descripcion="ngModel" [(ngModel)]="noticia.descripcion"
+                  [ngClass]="{'is-invalid': descripcion.errors && descripcion.touched}"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w)*(\.\w{2,3})+$" required>
+                <div [hidden]="!descripcion.errors?.required" class="invalid-feedback">
+                  Descripción de la noticia requerida
+                </div>
+                <div [hidden]="!email.errors?.pattern" class="invalid-feedback">
+                  Minimo 20 caracteres
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="saldo">Saldo</label>
+                <input type="number" name="saldo" class="form-control" #saldo="ngModel" [(ngModel)]="cliente.saldo"
+                  [ngClass]="{'is-invalid': saldo.errors && saldo.touched}" required>
+                <div [hidden]="!saldo.errors?.required" class="invalid-feedback">
+                  Saldo requerido
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

@@ -1,0 +1,52 @@
+<section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a routerLink="../creador-noticia" class="btn btn-primary btn-block">
+            <i class="fas fa-plus"></i> Agregar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Tabla-->
+  <section id="clientes">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4>Listado de Clientes</h4>
+            </div>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Categoria</th>
+                  <th>Fecha</th>
+                  <th>Localidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let noticia of noticias; let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{noticia.titulo}}</td>
+                  <td>{{noticia.categoria}}</td>
+                  <td>{{noticia.fecha}}</td>
+                  <td>{{noticia.localidad}}</td>
+                  <td>
+                    <a routerLink="/editar-noticia/{{noticia.id}}" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Editar
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
