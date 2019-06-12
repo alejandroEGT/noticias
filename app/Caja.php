@@ -23,4 +23,9 @@ class Caja extends Model
     	return ['status'=>'error', 'mensaje'=>'No Insertado'];
 
     }
+
+    protected function listar($r)
+    {
+    	return "listando..";
+    }
 }
