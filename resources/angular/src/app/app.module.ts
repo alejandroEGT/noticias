@@ -25,6 +25,8 @@ import { CreadorNoticiaComponent } from './componentesAdministrativo/creador-not
 import { CreadorUsuariosComponent } from './componentesAdministrativo/creador-usuarios/creador-usuarios.component';
 import { ConfiguracionComponent } from './componentesAdministrativo/configuracion/configuracion.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
+import { DetalleTipoServicio } from './servicios/detalleTipo.service';
+import { DetalleMesServicio } from './servicios/detalleMes.service';
 
 
 export function tokenGetter() {
@@ -67,7 +69,10 @@ export function tokenGetter() {
       }
     })
   ],
-  providers: [],
+  providers: [
+    DetalleTipoServicio,
+    DetalleMesServicio
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
