@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/getData', 'UsuarioController@create');
+
+Route::get('/traerMeses','flujoCajaController@traerMeses');
