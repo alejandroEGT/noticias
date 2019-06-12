@@ -25,7 +25,7 @@ export class CreadorNoticiaComponent implements OnInit {
   ngOnInit() {
   }
 
-  guardar(){
+  guardar(noticiaForm){
 
   }
 
