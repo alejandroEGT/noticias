@@ -13,7 +13,7 @@ export class FlujoCajaComponent implements OnInit {
 
   btnDetalle: boolean = false;
   btnTxt: string = "Ver";
-  btnRadio: string = "ingreso";
+  btnRadio: string;
   selectDetalleTipo: DetalleTipo[] = [];
   selectDetalleMes: DetalleMes[] = [];
 
@@ -23,7 +23,6 @@ export class FlujoCajaComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.selectDetalleTipo = this.detalleTipoServicio.tipoServicio;
     this.selectDetalleMes = this.detalleMesServicio.mesServicio;
   }
 
@@ -38,12 +37,13 @@ export class FlujoCajaComponent implements OnInit {
 
   }
   testing(evento){
-    /*console.log(evento.target.value);
     if(evento.target.value === "ingreso"){
-      console.log("llamando campos de ingreso");
+      this.selectDetalleTipo = this.detalleTipoServicio.tipoServicioIngreso;
     }else if(evento.target.value === "egreso"){
-      console.log("llamando campos de egreso");
-    }*/
+      this.selectDetalleTipo = this.detalleTipoServicio.tipoServicioEgreso;
+
+    }
+
   }
   
 }
