@@ -5,7 +5,6 @@ import { TitularesComponent } from './componentesNoticiero/titulares/titulares.c
 import { LeerNoticiaComponent } from './componentesNoticiero/leer-noticia/leer-noticia.component';
 import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
 import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
-import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { LoginComponent } from './componentesAdministrativo/login/login.component';
 import { MantenedorNoticiasComponent } from './componentesAdministrativo/mantenedor-noticias/mantenedor-noticias.component';
@@ -21,7 +20,7 @@ const routes: Routes = [
     { path: '', component: TitularesComponent },
     { path: 'leer', component: LeerNoticiaComponent },
 		{ path: 'selector', component: SelectorNoticiaComponent },
-		// { path: 'flujoCaja', component: FlujoCajaComponent },
+		{ path: 'flujoCaja', component: FlujoCajaComponent },
 		{ path: 'selector', component: SelectorNoticiaComponent },
 		{ path: 'flujoCaja', component: FlujoCajaComponent },
     { path: 'selector', component: SelectorNoticiaComponent }
