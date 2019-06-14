@@ -11,7 +11,7 @@ class Anios extends Model
     protected function traerAnios(){
         $mes = Anios::select([
             'id',
-            'descripcion as año'
+            'descripcion'
         ])
         ->where('activo', 's')
         ->get(); 
