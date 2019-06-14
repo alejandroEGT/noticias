@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/getData', 'UsuarioController@create');
+
+Route::get('/traerMeses','flujoCajaController@traerMeses');
+Route::get('/traerAnios','flujoCajaController@traerAnios');
+
+Route::post('/insertarCaja','flujoCajaController@insertarCaja');
+Route::get('/listarCaja/{anio}','flujoCajaController@detalleCaja');
+

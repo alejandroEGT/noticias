@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class createUserController extends Controller
 {
-    public function user(Request $request)
+    public function createuser(Request $request)
     {
     	dd($request);
     }

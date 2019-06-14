@@ -27,6 +27,7 @@ import { ConfiguracionComponent } from './componentesAdministrativo/configuracio
 import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { DetalleTipoServicio } from './servicios/detalleTipo.service';
 import { DetalleMesServicio } from './servicios/detalleMes.service';
+import { DetalleAnioServicio } from './servicios/detalleAnio.service';
 
 
 export function tokenGetter() {
@@ -71,7 +72,8 @@ export function tokenGetter() {
   ],
   providers: [
     DetalleTipoServicio,
-    DetalleMesServicio
+    DetalleMesServicio,
+    DetalleAnioServicio
   ],
   bootstrap: [AppComponent]
 })

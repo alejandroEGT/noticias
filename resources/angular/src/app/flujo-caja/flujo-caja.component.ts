@@ -3,6 +3,8 @@ import { DetalleTipo } from '../modelos/detalleTipo.model';
 import { DetalleTipoServicio } from '../servicios/detalleTipo.service';
 import { DetalleMes } from '../modelos/detalleMes.model';
 import { DetalleMesServicio } from '../servicios/detalleMes.service';
+import { DetalleAnio } from '../modelos/detalleAnio';
+import { DetalleAnioServicio } from '../servicios/detalleAnio.service';
 
 @Component({
   selector: 'app-flujo-caja',
@@ -16,13 +18,16 @@ export class FlujoCajaComponent implements OnInit {
   btnRadio: string;
   selectDetalleTipo: DetalleTipo[] = [];
   selectDetalleMes: DetalleMes[] = [];
+  selectDetalleAnio: DetalleAnio[] = [];
 
   constructor (
     private detalleTipoServicio:DetalleTipoServicio,
-    private detalleMesServicio:DetalleMesServicio
+    private detalleMesServicio:DetalleMesServicio,
+    private detalleAnioServicio:DetalleAnioServicio
     ) { }
 
   ngOnInit() {
+    this.selectDetalleAnio = this.detalleAnioServicio.anioServicio;
     this.selectDetalleMes = this.detalleMesServicio.mesServicio;
   }
 

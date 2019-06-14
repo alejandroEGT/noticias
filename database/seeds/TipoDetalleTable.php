@@ -29,4 +29,3 @@ class TipoDetalleTable extends Seeder
         ]);
     }
 }
-1
