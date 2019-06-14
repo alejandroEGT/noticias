@@ -1,0 +1,71 @@
+<div>
+  <div class="card">
+    <div class="card-header">
+      <strong>Flujo de Caja</strong>
+    </div>
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4"> <br><label><strong>Año</strong></label>
+          <select class="form-control">
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4"> <br><label><strong>Mes</strong></label>
+          <select class="form-control">
+              <option *ngFor="let mes of selectDetalleMes">{{mes.descripcion}}</option>
+          </select>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <br><label><strong>Monto inicial</strong></label><input class="form-control">
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4"><br><label><strong>Seleccione Tipo</strong></label>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" value="ingreso" name="btnRadio" [(ngModel)]="btnRadio"
+                (click)="testing($event)">Ingreso
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" value="egreso" name="btnRadio" [(ngModel)]="btnRadio"
+                (click)="testing($event)">Egreso
+            </label>
+          </div>
+        </div><br>
+
+        <div class="col-sm-6 col-md-4 col-lg-4"><br><label><strong>Detalle Tipo</strong></label>
+          <select class="form-control">
+            <option *ngFor="let detalle of selectDetalleTipo">{{detalle.descripcion}}</option>
+          </select>
+        </div>
+      </div><br>
+
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <br><label><strong>Monto del detalle</strong></label><input class="form-control">
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <br><label><strong>Detalle del Monto</strong></label><br>
+          <button class="btn btn-success" (click)="btnMonto()"> {{btnTxt}} detalle del monto</button>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3">
+            <br><label><strong>Guardar flujo de caja</strong></label><br>
+          <button class="btn btn-primary btn-block">Guardar</button>
+        </div>
+      </div>
+      <div class="row" *ngIf="btnDetalle">
+        <div class="col-sm-6 col-md-8 col-lg-8"><br>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+      </div><br>
+    </div>
+  </div>
+</div>

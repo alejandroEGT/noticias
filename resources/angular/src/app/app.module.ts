@@ -6,6 +6,9 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
+
 import { NavbarComponent } from './componentesNoticiero/navbar/navbar.component';
 import { TitularesComponent } from './componentesNoticiero/titulares/titulares.component';
 import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
@@ -22,6 +25,9 @@ import { CreadorNoticiaComponent } from './componentesAdministrativo/creador-not
 import { CreadorUsuariosComponent } from './componentesAdministrativo/creador-usuarios/creador-usuarios.component';
 import { ConfiguracionComponent } from './componentesAdministrativo/configuracion/configuracion.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
+import { DetalleTipoServicio } from './servicios/detalleTipo.service';
+import { DetalleMesServicio } from './servicios/detalleMes.service';
+
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -38,6 +44,8 @@ export function tokenGetter() {
     FooterComponent,
     NoticieroComponent,
     LoginComponent,
+
+    FlujoCajaComponent,
     MantenedorNoticiasComponent,
     MantenedorUsuariosComponent,
     EditarNoticiaComponent,
@@ -61,7 +69,10 @@ export function tokenGetter() {
       }
     })
   ],
-  providers: [],
+  providers: [
+    DetalleTipoServicio,
+    DetalleMesServicio
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -51,4 +51,20 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    protected function crear($r)
+    {
+        $u = $this;
+
+        $u->nombre = $r->nombre;
+        $u->nick = $r->nick;
+        $u->email = $r->email;
+        $u->password = bcrypt($r->password);
+        $u->activo = 'S';
+        $u->rol_id = 1;
+        if ($u->save()) {
+             return [ 'status'=>'success'];
+        }
+        return ['status'=>'error'];
+    }
 }
