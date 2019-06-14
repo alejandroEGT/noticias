@@ -1,9 +1,13 @@
-import { DetalleAnio } from "../modelos/detalleAnio";
+import { HttpClient } from "@angular/common/http";
 
 export class DetalleAnioServicio{
-    anioServicio: DetalleAnio[] = [
-        new DetalleAnio(1,2018),
-        new DetalleAnio(2,2019),
-        new DetalleAnio(3,2020)
-    ]
+    
+    constructor(private httpClient: HttpClient){
+
+    }
+
+    getAnios(ENDPOINT_URL:string){
+        return this.httpClient.get(ENDPOINT_URL + "/traerAnios");
+    }
+    
 }

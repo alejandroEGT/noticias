@@ -31,7 +31,6 @@ import { TablasCajaComponent } from './tablas-caja/tablas-caja.component';
 import { DetalleAnioServicio } from './servicios/detalleAnio.service';
 
 
-
 export function tokenGetter() {
   return localStorage.getItem('access_token');
 }

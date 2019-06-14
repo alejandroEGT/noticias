@@ -20,15 +20,24 @@ export class FlujoCajaComponent implements OnInit {
   selectDetalleMes: DetalleMes[] = [];
   selectDetalleAnio: DetalleAnio[] = [];
 
-  constructor (
-    private detalleTipoServicio:DetalleTipoServicio,
-    private detalleMesServicio:DetalleMesServicio,
-    private detalleAnioServicio:DetalleAnioServicio
-    ) { }
+  API_ENDPOINT = 'http://127.0.0.1:8000';
+
+  constructor(
+    private detalleTipoServicio: DetalleTipoServicio,
+    private detalleMesServicio: DetalleMesServicio,
+    private detalleAnioServicio: DetalleAnioServicio,
+  ) {
+    //CARGAR AÑOS EN SELECT
+    this.detalleAnioServicio.getAnios(this.API_ENDPOINT).subscribe((res : any[]) => {
+      this.selectDetalleAnio = res;
+    });
+    //CARGAR MESES EN SELECT
+    this.detalleMesServicio.getMeses(this.API_ENDPOINT).subscribe((res : any[]) => {
+      this.selectDetalleMes = res;
+    });
+  }
 
   ngOnInit() {
-    this.selectDetalleAnio = this.detalleAnioServicio.anioServicio;
-    this.selectDetalleMes = this.detalleMesServicio.mesServicio;
   }
 
   btnMonto() {
@@ -41,15 +50,15 @@ export class FlujoCajaComponent implements OnInit {
     }
 
   }
-  testing(evento){
-    if(evento.target.value === "ingreso"){
+  testing(evento) {
+    if (evento.target.value === "ingreso") {
       this.selectDetalleTipo = this.detalleTipoServicio.tipoServicioIngreso;
-    }else if(evento.target.value === "egreso"){
+    } else if (evento.target.value === "egreso") {
       this.selectDetalleTipo = this.detalleTipoServicio.tipoServicioEgreso;
 
     }
 
   }
-  
+
 }
 
