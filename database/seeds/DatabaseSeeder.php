@@ -11,8 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TipoDetalleSeed::class);
-        $this->call(AnioTable::class);
-        $this->call(MesesTable::class);
+        //$this->call(TipoDetalleSeed::class);
+        //$this->call(AnioTable::class);
+        //$this->call(MesesTable::class);
     }
 }
