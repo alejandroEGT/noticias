@@ -22,17 +22,55 @@ class Caja extends Model
     	}
     	return ['status'=>'error', 'mensaje'=>'No Insertado'];
 
-    }
+    }	
 
-    protected function listar($r)
-    {
+    protected function listar($anio)
+    {	
+    	$caja = $this;
+
+    	//ingreso------------------------------------------
     	$ingreso = TipoDetalle::traer_por_filtro(1);//ingreso
+    	
+    	foreach ($ingreso as $i) {
+    		for ($x=1; $x <= 12; $x++) { 
+    			
+    			$get_caja = $caja->select('monto')->where([
+    				'id_mes'=> $x,
+    				'id_detalle' => $i->id,
+    				//'id_anio' => $anio,
+    				'activo' => 'S'
+    			])->first();
 
-    	foreach ($ingreso as $key => $value) {
-    		# code...
+    			$i['mes_'.$x] = $get_caja['monto'];
+
+    		}
     	}
+    	//fin_ingreso----------------------------------------
 
-    	return "listando 2.0..";
-    	dd('test');
+    	//egresos--------------------------------------------
+
+    	$egreso = TipoDetalle::traer_por_filtro(2);//egreso
+    	
+    	foreach ($egreso as $i) {
+    		for ($x=1; $x <= 12; $x++) { 
+    			
+    			$get_caja = $caja->select('monto')->where([
+    				'id_mes'=> $x,
+    				'id_detalle' => $i->id,
+    				//'id_anio' => $anio,
+    				'activo' => 'S'
+    			])->first();
+
+    			$i['mes_'.$x] = $get_caja['monto'];
+
+    		}
+    	}
+    
+
+    	return [
+    		'ingresos' => $ingreso,
+    		'egresos' => $egreso
+    	];
+    	
     }
 }

@@ -14,8 +14,9 @@ class TipoDetalle extends Model
     }
 
      protected function traer_por_filtro($id){
+     	//return $id;
 
-    	return $this->where([
+    	return $this->select(['id','descripcion'])->where([
     		'id_tipo' => $id,
     		'activo' => 'S'
     	])->get();

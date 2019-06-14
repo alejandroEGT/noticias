@@ -22,7 +22,8 @@ class flujoCajaController extends Controller
         return $caja;
     }
     public function detalleCaja($año){
-        return $año;
-        //$dteCaja = Caja::
+        
+        $dteCaja = Caja::listar(2019);
+        return $dteCaja;
     }
 }
