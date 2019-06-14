@@ -27,6 +27,7 @@ import { ConfiguracionComponent } from './componentesAdministrativo/configuracio
 import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { DetalleTipoServicio } from './servicios/detalleTipo.service';
 import { DetalleMesServicio } from './servicios/detalleMes.service';
+import { TablasCajaComponent } from './tablas-caja/tablas-caja.component';
 
 
 export function tokenGetter() {
@@ -55,6 +56,7 @@ export function tokenGetter() {
     CreadorUsuariosComponent,
     ConfiguracionComponent,
     AdministrativoComponent,
+    TablasCajaComponent,
   ],
   imports: [
     BrowserModule,
