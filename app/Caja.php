@@ -26,6 +26,12 @@ class Caja extends Model
 
     protected function listar($r)
     {
+    	$ingreso = TipoDetalle::traer_por_filtro(1);//ingreso
+
+    	foreach ($ingreso as $key => $value) {
+    		# code...
+    	}
+
     	return "listando 2.0..";
     	dd('test');
     }

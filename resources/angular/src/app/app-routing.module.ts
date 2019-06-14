@@ -4,9 +4,7 @@ import { NoticieroComponent } from './noticiero/noticiero.component';
 import { TitularesComponent } from './componentesNoticiero/titulares/titulares.component';
 import { LeerNoticiaComponent } from './componentesNoticiero/leer-noticia/leer-noticia.component';
 import { SelectorNoticiaComponent } from './componentesNoticiero/selector-noticia/selector-noticia.component';
-
 import { FlujoCajaComponent } from './flujo-caja/flujo-caja.component';
-
 import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { LoginComponent } from './componentesAdministrativo/login/login.component';
 import { MantenedorNoticiasComponent } from './componentesAdministrativo/mantenedor-noticias/mantenedor-noticias.component';
@@ -17,11 +15,12 @@ import { CreadorNoticiaComponent } from './componentesAdministrativo/creador-not
 import { CreadorUsuariosComponent } from './componentesAdministrativo/creador-usuarios/creador-usuarios.component';
 import { ConfiguracionComponent } from './componentesAdministrativo/configuracion/configuracion.component';
 
-
 const routes: Routes = [
 	{ path: '', component: NoticieroComponent, children:[
     { path: '', component: TitularesComponent },
     { path: 'leer', component: LeerNoticiaComponent },
+		{ path: 'selector', component: SelectorNoticiaComponent },
+		{ path: 'flujoCaja', component: FlujoCajaComponent },
 		{ path: 'selector', component: SelectorNoticiaComponent },
 		{ path: 'flujoCaja', component: FlujoCajaComponent },
     { path: 'selector', component: SelectorNoticiaComponent }
@@ -35,7 +34,6 @@ const routes: Routes = [
     { path: 'creador-noticia', component: CreadorNoticiaComponent },
     { path: 'creador-usuarios', component: CreadorUsuariosComponent },
     { path: 'configuracion', component: ConfiguracionComponent }
-
   ]}
 ];
 
