@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 Route::get('test', function(){
 	return "prueba realizada";
 });
+Route::post('/insertarCaja','flujoCajaController@insertarCaja');
 Route::post('auth/login', 'AuthController@login');
 
 
